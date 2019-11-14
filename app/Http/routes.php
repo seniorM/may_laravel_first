@@ -14,6 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/test', function() {
-    echo'hello';
+Route::get('/tasks', function() {
+    return view('tasks');
+});
+//save task
+Route::post('/tasks', function() {
+    echo 'save task will be here';
+});
+//delete task
+Route::delete('/tasks/{task}', function() {
+    echo 'delete task will be here';
 });
