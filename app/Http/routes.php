@@ -25,7 +25,7 @@ Route::post('/tasks', function(Request $request) {
     ]);
 
     if ($validator->fails()) {
-        return redirect('/tasks')
+        return redirect(url('tasks'))
                         ->withInput()
                         ->withErrors($validator);
     }
